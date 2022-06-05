@@ -1,0 +1,253 @@
+*{
+  
+    box-sizing: border-box;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#1c2236;
+   /* font-family:fantasy;*/
+}
+
+.row {
+    display: flex;
+    /*flex wrap:wrap;*/
+    margin-left:-15px;
+    
+}
+.col-50{
+    flex-basis: 50%;
+    padding-left: 15px;
+    /*border: 1px solid;*/
+}
+.col-40{
+    flex-basis: 40%;
+    padding-left: 15px;
+    /*border: 1px solid;*/
+}
+.col-25{
+    flex-basis: 25%;
+    padding-left: 15px;
+    /*border: 1px solid;*/
+}
+.col-30{
+    flex-basis: 30%;
+    padding-left: 15px;
+    /*border: 1px solid;*/
+}
+.container1{
+   /* background-color:#74bae6;*/
+    border:1px solid ;
+   
+    width: 1050px;
+    margin: auto;
+    padding: auto; 
+    /* text-align: justify; */
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    padding-top: 30px;
+    /* background-image: linear-gradient(to bottom, green, rgb(225, 225, 62),rgb(226, 171, 69), green  ); */
+    background-image: linear-gradient(180deg,rgb(230, 64, 64), yellow,rgb(228, 61, 61));
+   
+
+    
+} 
+
+.menu-area{
+   
+}
+
+.menu-area ul {
+   /*margin: 0;
+   padding: 0;*/
+    display: flex;
+}
+
+.menu-area ul li{
+    list-style: none; /* listgular circle cole jabe */
+    padding-top: 20px;
+    
+}
+
+.menu-area ul li a {
+    text-decoration: none; /* listgular(anchor tager)underline gula cole jabe */
+     padding: 10px 15px; 
+    /* padding-bottom: 20px; */
+    display: inline-block; /*anchor tag akti inline element tai take block korte hoy . eti korle uporer padding ta kaj kore */
+    background-color: rgb(47, 19, 227);
+    margin-right: 20px;
+    margin-top: 0;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 7px;
+    
+}
+ .menu-area ul li.logo a {
+background: transparent;
+
+}
+.menu-area ul li.logo img{
+    max-width: 80px;
+    
+}
+.menu-area ul li.logo{
+    margin-right: auto;
+} 
+
+.menu-area ul li a:hover{
+font-size: 30px;
+background-color: rgb(231, 21, 213);
+}
+
+
+
+
+
+/*--------main--------*/
+.main2{
+
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid; */
+    position: relative;
+    top: 0px;/*left,right,bottom,top*/
+}
+
+.main3{
+   /* border: 2px solid; */
+}
+
+.container2 {
+    /* border: 1px solid; */
+    margin:0;
+    padding:0;
+    margin top: 0;
+    margin: auto;
+    padding: auto;
+    width: 1050px;
+    /*height: 70px;*/
+   /* background-color: rgba(11, 11, 241, 0.542);*/
+    /* background-color: rgb(238, 233, 233);  */
+    
+
+
+    text-align: center;
+}
+.container2 p{
+    margin :0;
+    padding: 0;
+    
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(244, 10, 10);
+    font-style: normal;
+    text-decoration: double;
+    font-weight: 1000;
+    font-size: 50px;
+    text-shadow: 5px 6px 5px rgb(11, 117, 239);
+}
+.main3 .container3{
+    padding-top: 0;
+    position: relative;
+    top: 0px;
+    border: 0.1px solid;
+}
+
+.container3{
+    margin :0;
+    padding: 0;
+    margin: auto;
+    padding: auto;
+    width: 1050px;
+    height: 1000px;
+    border-radius: 15px;
+    /*background-color: rgba(137, 211, 152, 0.542);*/
+   /* background-image: linear-gradient(to bottom, green, rgb(225, 225, 62),rgb(226, 171, 69)  ); */
+     /*background-image: linear-gradient(to bottom, rgba(137, 211, 152, 0.542), rgba(109, 238, 135, 0.542),rgba(112, 193, 128, 0.542)  );*/
+      /* background-image: linear-gradient(90deg,red,rgb(9, 86, 239) ,rgb(9, 166, 239),rgb(9, 86, 239),rgb(255, 170, 0));  */
+     /* background-image: linear-gradient(to bottom, green, rgb(225, 225, 62),rgb(226, 171, 69), green  );  */
+     background-image: linear-gradient(45deg, #4B68D8, #AC6AB2 );
+    text-align: center;
+}
+
+
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container3 p {
+    /* display:inline-block; */
+    border-radius: 5px;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration:double;
+    font-size: 40px;
+    font-weight: 1000;
+    color: rgb(8, 208, 244);
+    transition: 2s;
+    /*max-height: 50px;*/
+    
+}
+.container3 p:hover{
+
+    font-size: 60px;
+    background-color: rgb(28, 20, 240);
+    
+
+}
+.rag-image1{
+    /*border: 1px solid;*/
+}
+.rag-image1 img{
+max-width: 300px;
+height:220px;
+}
+.internal-function{
+    border: 2px solid;
+    border-radius: 10px;
+}
+.internal-function ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.internal-function ul li{
+ margin-top: 40px;
+ list-style: none;  /* listgular circle cole jabe */
+ margin-bottom: 30px;
+
+}
+.internal-function ul li a{
+    text-decoration: none; /* listgular(anchor tager)underline gula cole jabe */
+    background-color: rgb(109, 5, 87);
+    margin-right: 10px;
+
+    text-align: center;
+    font-size: 20px;
+    color:white;
+    border-radius: 10px;
+   /* border: 1px solid rgb(32, 19, 19);*/
+    padding:15px;
+    transition: 0.5s;
+
+}
+
+.internal-function ul li a:hover{
+    font-size: 30px;
+    background-color: rgb(240, 19, 19);
+    
+}
+
+
+.rag-image2 {}
+
+.rag-image2 img{
+max-width: 300px;
+}
+.trending-area.p{
+    margin:0;
+    padding 0;
+}
