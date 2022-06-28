@@ -3,8 +3,9 @@
 .data 
 .code
 main proc
-    mov ah,2
     mov cx,10
+    
+    mov ah,2
     mov dl,65    
     
    loop:  
