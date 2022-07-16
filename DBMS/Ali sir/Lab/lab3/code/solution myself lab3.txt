@@ -1,0 +1,7 @@
+CREATE TABLE employee(
+   emp_id int NOT null PRIMARY KEY AUTO_INCREMENT,
+   emp_name varchar(50) not null,
+   dept_id int not null,
+   type_of_work varchar(2) CHECK (type_of_work ='F' OR type_of_work = 'P'),
+   hourly_rate int CHECK ((type_of_work ='P' and hourly_rate>=25 and hourly_rate<=60)OR(type_of_work ='F' and hourly_rate=null))
+);
