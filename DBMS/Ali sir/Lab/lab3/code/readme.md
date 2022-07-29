@@ -1,1 +1,67 @@
 
+CREATE TABLE employee(
+   emp_id int NOT null PRIMARY KEY AUTO_INCREMENT,
+   emp_name varchar(50) not null,
+   dept_id int not null,
+   type_of_work varchar(2) CHECK (type_of_work ='F' OR type_of_work = 'P'),
+   hourly_rate int CHECK ((type_of_work ='P' and hourly_rate>=25 and hourly_rate<=60)OR(type_of_work ='F' and hourly_rate=null))
+);
+
+
+// myself
+1.
+SELECT employee.emp_name,dept.dept_name
+FROM dept JOIN employee
+USING (dept_id)
+WHERE dept_name='engineering'
+
+4.
+(SELECT emp_name 
+FROM employee JOIN ft_pt_work JOIN project
+WHERE employee.emp_id = ft_pt_work.emp_id AND ft_pt_work.project_id = project.project_id AND project.project_name="googong subdivision"AND project.project_name="burton highway")
+
+
+
+//Polash er 
+
+
+1*.
+SELECT emp_name AS Employee FROM employee JOIN dept JOIN ft_pt_work JOIN project
+WHERE employee.dept_id = dept.dept_id AND
+dept.dept_name = 'Engineering' AND ft_pt_work.emp_id = employee.emp_id AND 
+ft_pt_work.project_id=project.project_id AND 
+project.project_name='Googong Subdivision' AND project.project_location = 'Googong city';
+
+3*.
+SELECT emp_name,street_no,street_name,city,zip_code
+FROM employee JOIN address JOIN dept JOIN ft_pt_work JOIN project
+WHERE employee.emp_id = address.emp_id AND employee.emp_id = ft_pt_work.emp_id
+AND ft_pt_work.project_id = project.project_id AND project.project_location = 'Burton Canberra' AND ft_pt_work.dept_id = dept.dept_id
+AND dept.dept_location != 'Canberra';
+
+4*.
+(SELECT emp_name FROM
+employee JOIN ft_pt_work JOIN project
+WHERE employee.emp_id = ft_pt_work.emp_id AND
+ft_pt_work.project_id = project.project_id AND project.project_name = 'Googong Subdivision')
+INTERSECT
+(SELECT emp_name FROM
+employee JOIN ft_pt_work JOIN project
+WHERE employee.emp_id = ft_pt_work.emp_id AND
+ft_pt_work.project_id = project.project_id AND project.project_name = 'Burton Highway');
+
+
+5*.
+CREATE VIEW worker AS
+(SELECT DISTINCT emp_name,dept_name,type_of_work,basic,deduction,net_salary
+ FROM employee JOIN ft_pt_work JOIN dept JOIN salary
+WHERE employee.emp_id = ft_pt_work.emp_id AND ft_pt_work.dept_id=dept.dept_id AND employee.emp_id = salary.emp_id );
+
+
+2*.
+SELECT emp_name AS Employee FROM employee JOIN ft_pt_work JOIN project JOIN dept
+WHERE employee.emp_id = ft_pt_work.emp_id AND ft_pt_work.project_id = project.project_id
+AND ft_pt_work.dept_id=dept.dept_id AND dept.dept_name='Labor' 
+AND project.project_name = 'Googong Subdivision' 
+AND project.project_location = 'Googong city'
+AND ft_pt_work.num_of_hours > 20;
