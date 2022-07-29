@@ -9,6 +9,7 @@ CREATE TABLE employee(
 
 
 // myself
+
 1.
 SELECT employee.emp_name,dept.dept_name
 FROM dept JOIN employee
