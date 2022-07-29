@@ -9,12 +9,11 @@ CREATE TABLE employee(
 
 
 // myself
-
 1.
-SELECT employee.emp_name,dept.dept_name
-FROM dept JOIN employee
-USING (dept_id)
-WHERE dept_name='engineering'
+SELECT employee.emp_name
+FROM project JOIN ft_pt_work JOIN dept JOIN employee
+WHERE  dept.dept_id=employee.dept_id AND dept.dept_name='engineering'AND ft_pt_work.emp_id=employee.emp_id AND ft_pt_work.project_id=project.project_id and project_name='googong subdivision' AND project_location='googong';
+
 
 4.
 (SELECT emp_name 
