@@ -13,6 +13,16 @@ CREATE TABLE employee(
 SELECT employee.emp_name
 FROM project JOIN ft_pt_work JOIN dept JOIN employee
 WHERE  dept.dept_id=employee.dept_id AND ft_pt_work.emp_id=employee.emp_id AND ft_pt_work.dept_id= dept.dept_id AND ft_pt_work.project_id=project.project_id and project_name='googong subdivision' AND project_location='googong'AND dept.dept_name='engineering'
+2.
+SELECT employee.emp_name as labour
+FROM employee JOIN ft_pt_work JOIN project JOIN dept
+WHERE ft_pt_work.emp_id=employee.emp_id 
+AND ft_pt_work.project_id = project.project_id
+AND ft_pt_work.dept_id=dept.dept_id 
+AND dept.dept_name='Labor' 
+AND project.project_name = 'googong subdivision' 
+AND project.project_location = 'googong'
+AND ft_pt_work.num_of_hours > 20;
 
 
 
@@ -32,6 +42,17 @@ WHERE employee.dept_id = dept.dept_id AND
 dept.dept_name = 'Engineering' AND ft_pt_work.emp_id = employee.emp_id AND 
 ft_pt_work.project_id=project.project_id AND 
 project.project_name='Googong Subdivision' AND project.project_location = 'Googong city';
+
+2*.
+SELECT employee.emp_name as labour
+FROM employee JOIN ft_pt_work JOIN project JOIN dept
+WHERE ft_pt_work.emp_id=employee.emp_id 
+AND ft_pt_work.project_id = project.project_id
+AND ft_pt_work.dept_id=dept.dept_id 
+AND dept.dept_name='Labor' 
+AND project.project_name = 'googong subdivision' 
+AND project.project_location = 'googong'
+AND ft_pt_work.num_of_hours > 20;
 
 3*.
 SELECT emp_name,street_no,street_name,city,zip_code
