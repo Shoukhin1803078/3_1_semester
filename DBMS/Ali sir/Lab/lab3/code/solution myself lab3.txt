@@ -57,8 +57,12 @@ AND ft_pt_work.num_of_hours > 20;
 3*.
 SELECT emp_name,street_no,street_name,city,zip_code
 FROM employee JOIN address JOIN dept JOIN ft_pt_work JOIN project
-WHERE employee.emp_id = address.emp_id AND employee.emp_id = ft_pt_work.emp_id
-AND ft_pt_work.project_id = project.project_id AND project.project_location = 'Burton Canberra' AND ft_pt_work.dept_id = dept.dept_id
+WHERE 
+employee.emp_id = address.emp_id
+AND employee.emp_id = ft_pt_work.emp_id
+AND ft_pt_work.project_id = project.project_id 
+AND ft_pt_work.dept_id = dept.dept_id
+AND project.project_location = 'Burton Canberra' 
 AND dept.dept_location != 'Canberra';
 
 4*.
